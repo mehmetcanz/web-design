@@ -119,6 +119,12 @@ img:hover {
     -webkit-line-clamp: 10;
     -webkit-box-orient: vertical;
 }
+.line-clamp16 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 16;
+    -webkit-box-orient: vertical;
+}
 
 /*--------------------------Navbar First-------------------------------------- */
 #navbar_first {
@@ -175,7 +181,7 @@ margin-right:3rem;
 }
 
 .top_bar {
-    background-color: #0c79ee;
+    background-color: var(--blue);
 }
 
 .top_bar ul li i {
@@ -184,8 +190,8 @@ margin-right:3rem;
 
 /* dark */
 .dark_mode_css {
-    background-color: #101111 !important;
-    color: white !important;
+    background-color: #101111;
+    color: white ;
     cursor: pointer;
 }
 
@@ -194,7 +200,7 @@ margin-right:3rem;
     position: sticky;
     top: 0;
     z-index: 1;
-    
+    opacity: 0.9;
 }
 
 #logo {
@@ -202,32 +208,137 @@ margin-right:3rem;
     width: 5rem;
 }
 
-
 /*--------------------------Header-------------------------------------- */
 header{
-    background-size: cover;
-    background-position: 50% 50%;
-    z-index:-1;
+    z-index:1;
 }
 
 .carousel-item{
-   height: 60vh;
+   height: 30rem;
 }
 
 
 /*--------------------------Main-------------------------------------- */
+/*########### our_work ########### */
 #our_work{
     margin-bottom: 3rem;
-    margin-top:3rem
 }
 
 #our_work i{
     font-size: 4rem;
 }
 
+/*########### counter_work ###########*/
+#counter_work {
+    background-color: #0c79ee;
+    color:white;
+    margin-top:3rem;
+    padding:8rem;
+}
+
+#counter_work i{
+    font-size: 3rem;
+}
+
+#counter_work p{
+    color:white;
+}
+
+
+/*########### parallax_work ########### */
+#parallax_work{
+    background-image: url("../images/parallax.jpg");
+    background-color: rgba(0,0,0,.2);
+    color:white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 3rem;
+}
+
+#parallax_work .col-md-6 p{
+    text-indent: 3rem;
+    background-color: rgba(0,0,0,.6); 
+    color:white; padding:0 1rem;
+
+}
+
+/*########### aboutme_work ########### */
+#aboutme_work {
+    background-color: #0c79ee;
+    padding:4rem;
+}
+
+#aboutme_work p{
+    text-indent: 3rem;
+    color:white;
+}
+
+/*########### blog_work ########### */
+#blog_work{
+    position: relative;
+}
+
+#blog_work::before{
+    position:absolute;
+    top:0;
+    right: 0px;
+    bottom: 0;
+    left: 0px;
+    content: "";
+    background-image: url('../images/blog.jpg');
+    background-size: cover;
+    opacity: .9;
+}
+
+#blog_work .card{
+    margin-bottom: 2rem;
+}
+
+#blog_work .card:hover{
+    box-shadow: rgba(0, 0, 0, 0.8) ;
+    cursor: pointer;
+    transition: 2s all;
+}
+
+#blog_work .card img:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+
+#blog_work .card-text{
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+}
+
+#blog_work img{
+    width: auto;
+    height: 20rem;
+}
+
+/*########### contact_work ########### */
+#contact_work{
+    padding:6rem;
+}
+#c_form{
+    background-color: rgba(0,0,0,.8);
+    padding:1rem;
+}
+
+/*########### backtop ########### */
+#back_top{
+    position: fixed;
+    right: 0;
+    bottom: 0px;
+    background-color: #101111;
+    padding: 0.5rem;
+    color:yellow;
+    border-radius: 0.5rem;
+}
 
 /*--------------------------Footer-------------------------------------- */
-
 footer{
 min-height: 20rem;
 max-width: 100%;
@@ -240,10 +351,6 @@ color: white;
     padding: 3rem;
 }
 
-#footer_top .container .row .shadow{
-  
-}
-
 
 #footer_bottom {
     background-color: #101111;
@@ -252,3 +359,15 @@ color: white;
 #footer_bottom p{
     color: white;
 }
+
+
+.buttonn{
+
+text-align: center;
+padding-top: 1rem;
+
+
+}
+
+
+/*--------------------------Responsive Design-------------------------------------- */
